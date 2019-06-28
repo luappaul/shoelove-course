@@ -1,29 +1,29 @@
 <div class="big-container product-manage-wrapper flexed-item">
-  <form action="POST" class="add-product-form">
+  <form action="/product_edit/{{prod._id}}" method="POST" class="add-product-form">
     <h3 class="form-title"> Edit Sneaker</h3>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-name" class="label-name label">Model name</label>
-      <input type="text" class="input-text input" placeholder="Nike Air Max 90">
+      <input type="text" name="name" class="input-text input" placeholder="Nike Air Max 90">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-ref" class="label-ref label">Réf.</label>
-      <input type="text" class="input-text input" placeholder="ex: NV23498">
+      <input type="text" name="ref" class="input-text input" placeholder="ex: NV23498">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-size" class="label-ref label">Size</label>
-      <input type="number" class="input-text input" placeholder="ex: 37">
+      <input type="number" name="sizes" class="input-text input" placeholder="ex: 37">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-descr" class="label-descr label">Description</label>
-      <input type="text" class="input-text input" placeholder="The better sneakers to run">
+      <input type="text" name="description" class="input-text input" placeholder="The better sneakers to run">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-price" class="label-price label">Price</label>
-      <input type="number" class="sneacker-price input" min="1">
+      <input type="number" name="price" class="sneacker-price input" min="1">
     </div>
     <div class="form-item-wrapper flexed-item">
       <label for="sneacker-main-cat" class="label-main-cat label">Main category</label>
-      <select name="main-category" id="main_category" class="select">
+      <select name="category" id="main_category" class="select">
         <option value="">Choose main Category...</option>
         <option value="">Men</option>
         <option value="">Women</option>
@@ -32,13 +32,13 @@
     </div>
     <div class="form-item-wrapper flexed-item">
       <label class="label">Tags</label>
-      <select name="sneacker-secondary-cat" id="secondary_category" class="select">
+      <select name="sneackerSecondaryCat" id="secondary_category" class="select">
         <option value="">Choose Secondary Category...</option>
         <option value="">Friendly</option>
         <option value="">Urban style</option>
         <option value="">Dope</option>
       </select>
     </div>
-    <button class="button-primary add-sneacker-btn">Add to collection</button>
+    <button class="button-primary add-sneacker-btn">Modify</button>
   </form>
 </div>
